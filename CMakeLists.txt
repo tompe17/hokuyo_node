@@ -70,4 +70,10 @@ install(TARGETS hokuyo_node getID getFirmwareVersion
 
 install(FILES test/TODO test/unplug_test.launch COPYING.lib hokuyo_test.launch hokuyo_test.vcg hokuyo_test_intensity.launch
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
+	)
+
+set(cpackconfig "/opt/lrs_wara/src/lrs_wara/cpackconfig.cmake")
+if (EXISTS ${cpackconfig})
+  include(${cpackconfig})
+endif()
+      
