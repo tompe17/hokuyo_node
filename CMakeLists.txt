@@ -74,6 +74,7 @@ install(FILES test/TODO test/unplug_test.launch COPYING.lib hokuyo_test.launch h
 
 set(cpackconfig "/opt/lrs_wara/src/lrs_wara/cpackconfig.cmake")
 if (EXISTS ${cpackconfig})
+  set(CPACK_PACKAGE_NAME "hokuyo-node")    
   include(${cpackconfig})
 endif()
       
